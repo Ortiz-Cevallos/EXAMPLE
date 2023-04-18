@@ -15,7 +15,7 @@ library(reticulate)
 
 ## Blanchard-Quah ortogonalización (restricciones) sobre C(1)
 
-Hla como estas Al observar la evolución del crédito hacia consumo provisto por el sistema bancario guatemalteco y disponible en @SECMCADATOS, se observa una series con una tendendencia estocástica.
+Hola como estas Al observar la evolución del crédito hacia consumo provisto por el sistema bancario guatemalteco y disponible en @SECMCADATOS, se observa una series con una tendendencia estocástica.
 
 ```{r message=FALSE, warning=FALSE}
 library("zoo")

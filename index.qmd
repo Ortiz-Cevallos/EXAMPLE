@@ -1,5 +1,5 @@
 ---
-title: "EXAMPLE"
+title: "RECURSOS TÉCNICOS"
 listing:
   contents: posts
   sort: "date desc"

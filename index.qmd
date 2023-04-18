@@ -1,5 +1,6 @@
 ---
-title: "RECURSOS TÉCNICOS Y ANÁLISIS LIBRES"
+title: "ECONOMORFOSIS"
+subtitle: "Recursos técnicos y análisis ocasional"
 listing:
   contents: posts
   sort: "date desc"

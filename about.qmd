@@ -8,5 +8,3 @@ about:
       text: Github
       href: https://github.com/Ortiz-Cevallos
 ---
-
-Acerca este blog

@@ -7,9 +7,8 @@ website:
   favicon: "Luis.png"
   navbar:
     right:
-      - about.qmd
       - icon: github
-        href: https://github.com/
+        href: https://github.com/Ortiz-Cevallos
 format:
   html:
     theme: zephyr

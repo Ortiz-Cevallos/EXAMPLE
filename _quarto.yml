@@ -13,7 +13,7 @@ website:
 lang: es
 format:
   html:
-    theme: zephyr
+    theme: pulse
     css: styles.css
     code-fold: true
     include-after-body: graph_fold.html

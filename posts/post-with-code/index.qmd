@@ -2,8 +2,8 @@
 title: "MODELOS SEMI ESTRUCTURALES PARA EL CRÉDITO AL CONSUMO"
 author: "[Luis Ortiz-Cevallos](https://ortiz-cevallos.github.io/MYSELF/)"
 date: "2023-04-14"
-categories: [news, code, analysis]
-image: "image.jpg"
+#categories: [news, code, analysis]
+image: "SVAR.png"
 ---
 
 ```{r setup, include=FALSE}
@@ -11,11 +11,11 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 library(reticulate)
 ```
 
-# Aplicación para Guatepeor no guatemala
+# Aplicación para Guatemala
 
 ## Blanchard-Quah ortogonalización (restricciones) sobre C(1)
 
-Hola como estas Al observar la evolución del crédito hacia consumo provisto por el sistema bancario guatemalteco y disponible en @SECMCADATOS, se observa una series con una tendendencia estocástica.
+Al observar la evolución del crédito hacia consumo provisto por el sistema bancario guatemalteco y disponible en @SECMCADATOS, se observa una series con una tendendencia estocástica.
 
 ```{r message=FALSE, warning=FALSE}
 library("zoo")

@@ -1,5 +1,5 @@
 ---
-title: "RECURSOS TÉCNICOS"
+title: "RECURSOS TÉCNICOS Y ANÁLISIS LIBRES"
 listing:
   contents: posts
   sort: "date desc"

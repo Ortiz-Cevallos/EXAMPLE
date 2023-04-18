@@ -3,15 +3,13 @@ project:
   output-dir: docs
 website:
   title: "LUIS ORTIZ CEVALLOS"
-  sidebar: 
-    logo: Luis.png
+  image: "Luis.png"
+  favicon: "Luis.png"
   navbar:
     right:
       - about.qmd
       - icon: github
         href: https://github.com/
-      - icon: twitter
-        href: https://twitter.com
 format:
   html:
     theme: zephyr

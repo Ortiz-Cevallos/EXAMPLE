@@ -1,11 +1,11 @@
 ---
-title: "Welcome To My Blog"
-author: "Tristan O'Malley"
+title: "Cuenta corriente de El Salvador en el 2022"
+author: "Luis Ortiz"
 date: "2023-04-11"
-categories: [news]
+#categories: [news]
 ---
 
-This is the first post in a Quarto blog. Welcome!
+Bienvenidos
 
 ![](thumbnail.jpg)
 

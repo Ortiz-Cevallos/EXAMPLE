@@ -9,6 +9,8 @@ website:
     right:
       - icon: github
         href: https://github.com/Ortiz-Cevallos
+
+lang: es
 format:
   html:
     theme: zephyr

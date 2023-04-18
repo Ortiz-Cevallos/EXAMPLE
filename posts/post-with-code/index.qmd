@@ -6,20 +6,16 @@ categories: [news, code, analysis]
 image: "image.jpg"
 ---
 
-
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 library(reticulate)
 ```
 
-# Aplicación para Guatemala
+# Aplicación para Guatepeor
 
 ## Blanchard-Quah ortogonalización (restricciones) sobre C(1)
 
-
-Al observar la evolución del crédito hacia consumo provisto por el sistema bancario guatemalteco y disponible en @SECMCADATOS, se observa una series con una tendendencia estocástica. 
-
+Hla como estas Al observar la evolución del crédito hacia consumo provisto por el sistema bancario guatemalteco y disponible en @SECMCADATOS, se observa una series con una tendendencia estocástica.
 
 ```{r message=FALSE, warning=FALSE}
 library("zoo")
@@ -49,10 +45,11 @@ RES_BANCARIOS_MARZO_2023.xlsx")+
 G
 ```
 
-El proceso de generación de la serie del crédito al consumo puede explicarse a través de la identificación de diferentes innovaciones. Una de ellas, las llamaré  tecnológicas (en general uso ese término para referir los factores que pueden producir una mayor inclusión financiera independientemente si es producto de políticas o nuevas tecnologías), la segunda las de denanda y la tercera de absorción fiscal.
+El proceso de generación de la serie del crédito al consumo puede explicarse a través de la identificación de diferentes innovaciones. Una de ellas, las llamaré tecnológicas (en general uso ese término para referir los factores que pueden producir una mayor inclusión financiera independientemente si es producto de políticas o nuevas tecnologías), la segunda las de denanda y la tercera de absorción fiscal.
 
-Para este ejercicio de identificación sigo la metodología propuesta por @BLANCHARD88 y estimo la forma reducida de un Vector Autorregresivo integrado por la tasa de crecimiento de la cartera de consumo nominal ($\Delta c_{t}$),  la tasa de crecimiento del PIB ($\Delta y_{t}$) y el porcentaje de los activos de los sistemas bancarios en títulos y valores públicos ($\Delta y_{t}$). La representación de este VAR como un proceso de media móviles está dado por:
+Para este ejercicio de identificación sigo la metodología propuesta por @BLANCHARD88 y estimo la forma reducida de un Vector Autorregresivo integrado por la tasa de crecimiento de la cartera de consumo nominal ($\Delta c_{t}$), la tasa de crecimiento del PIB ($\Delta y_{t}$) y el porcentaje de los activos de los sistemas bancarios en títulos y valores públicos ($\Delta y_{t}$). La representación de este VAR como un proceso de media móviles está dado por:
 
+```{=tex}
 \begin{equation}
 X_{t}=\left( \begin{array}{c}
 \Delta c_{t} \\
@@ -61,10 +58,11 @@ X_{t}=\left( \begin{array}{c}
 \end{array}
 \right)=A(L)e_{t}
 \label{e1}
-\end{equation} 
+\end{equation}
+```
+Considero $A(0)=I$ y $\Sigma_e=E(e e^{\tau})$ como la matriz de varianza y covarianza de la forma reducida del VAR mostrado en \ref{e1}. Y supongo, primero que el crédito hacia consumo, la actividad económica y la exposición del sistema bancario hacia valores del gobierno son producidos a través de tres procesos estructurales independientes con shocks de varianza unitaria. Y segundo, que uno de esos procesos, el de las innovaciones tecnológicas, es el responsable de la tendencia estocástica observada en el crédito para consumo. Con base en lo anterior defino un VAR estructural cuya representación como un proceso de medias móviles es el siguiente:
 
-Considero $A(0)=I$ y $\Sigma_e=E(e e^{\tau})$ como la matriz de varianza y covarianza de la forma reducida del VAR mostrado en \ref{e1}. Y supongo, primero que el crédito hacia consumo, la actividad económica y la exposición del sistema bancario hacia valores del gobierno son producidos a través de tres procesos estructurales independientes con shocks de varianza unitaria. Y segundo, que uno de esos procesos, el de las innovaciones tecnológicas, es el responsable de la tendencia estocástica observada en el crédito para consumo. Con base en lo anterior defino un VAR estructural cuya representación como un proceso de medias móviles es el siguiente: 
-
+```{=tex}
 \begin{equation}
 X_{t}=C(L)\epsilon_{t}=\left( \begin{array}{ccc}
 C_{1,1}(L) & C_{1,2}(L) & C_{1,3}(L)\\
@@ -73,8 +71,8 @@ C_{3,1}(L) & C_{3,2}(L) & C_{3,3}(L)
 \end{array}
 \right)\epsilon_{t}
 \label{e2}
-\end{equation} 
-
+\end{equation}
+```
 Siendo $\Sigma_{\epsilon}=E(\epsilon \epsilon^{\tau})=I$ la matriz de varianza y covarianza de los shocks estructurales, los cuales son independientes y con varianza unitaria, y $C_{1,2}(1)=C_{1,3}(1)=0$, indicando que el shock de demanda y fiscal sobre las variables tasa de crecimiento del PIB y porcentaje de activos invertidos en valores soberanos, en su orden, no tienen efectos de largo plazo en el crédito nominal para consumo.
 
 El proceso y resultado de la estimación es el siguiente:
@@ -111,6 +109,7 @@ VAR$varresult$x$coefficients
 SIGMA<-summary(VAR)
 SIGMA$covres
 ```
+
 Habiendo estimado el VAR a continuación encontramos las restricciones de corto o contemporáneas y largo plazo:
 
 ```{r message=FALSE, warning=FALSE}
@@ -321,5 +320,3 @@ BQc_D<-xts(BQc_D, order.by=dates1)
 BQc_F<-BQh[,1,3] #SHOCK DEMANDA2 SOBRE c
 BQc_F<-xts(BQc_F, order.by=dates1)
 ```
-
-

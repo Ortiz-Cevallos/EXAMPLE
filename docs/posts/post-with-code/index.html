@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.3.319">
@@ -7,7 +7,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Luis Ortiz-Cevallos">
-<meta name="dcterms.date" content="2023-04-14">
 
 <title>LUIS ORTIZ CEVALLOS - MODELOS SEMI ESTRUCTURALES PARA EL CRÉDITO AL CONSUMO</title>
 <style>
@@ -84,15 +83,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "type": "overlay",
   "limit": 20,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-no-results-text": "Sin resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar"
   }
 }</script>
 
@@ -113,18 +112,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <span class="navbar-title">LUIS ORTIZ CEVALLOS</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Buscar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="../../about.html" rel="" target="">
- <span class="menu-text">Acerca</span></a>
-  </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/" rel="" target=""><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/Ortiz-Cevallos" rel="" target=""><i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -147,16 +142,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="quarto-title-meta">
 
       <div>
-      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-heading">Autor/a</div>
       <div class="quarto-title-meta-contents">
                <p><a href="https://ortiz-cevallos.github.io/MYSELF/">Luis Ortiz-Cevallos</a> </p>
             </div>
     </div>
       
       <div>
-      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-heading">Fecha de publicación</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">April 14, 2023</p>
+        <p class="date">14 de abril de 2023</p>
       </div>
     </div>
     
@@ -181,7 +176,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Al observar la evolución del crédito hacia consumo provisto por el sistema bancario guatemalteco y disponible en <span class="citation" data-cites="SECMCADATOS">@SECMCADATOS</span>, se observa una series con una tendendencia estocástica.</p>
 <div class="cell">
 <details>
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"zoo"</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"xts"</span>)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
@@ -206,7 +201,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>          <span class="at">caption =</span> <span class="st">"https://www.secmca.org/wp-content/uploads/2023/03/REPORTE_INDICADO</span></span>
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="st">RES_BANCARIOS_MARZO_2023.xlsx"</span>)<span class="sc">+</span></span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">size=</span><span class="fl">1.5</span>)</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>G</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>G</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <p><img src="index_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
@@ -237,7 +232,7 @@ C_{3,1}(L) &amp; C_{3,2}(L) &amp; C_{3,3}(L)
 <p>El proceso y resultado de la estimación es el siguiente:</p>
 <div class="cell">
 <details>
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>CRED       <span class="ot">&lt;-</span>DATA_MES<span class="sc">$</span>CRED</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>FISCAL     <span class="ot">&lt;-</span>DATA_MES<span class="sc">$</span>PUB</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>CRED       <span class="ot">&lt;-</span>CRED[<span class="st">"2008-01-01/2022-09-01"</span>]</span>
@@ -263,7 +258,7 @@ C_{3,1}(L) &amp; C_{3,2}(L) &amp; C_{3,3}(L)
 <span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>DATA       <span class="ot">&lt;-</span><span class="fu">xts</span>(DATA[,<span class="sc">-</span><span class="dv">1</span>], <span class="at">order.by=</span><span class="fu">as.Date</span>(DATA[,<span class="dv">1</span>], <span class="st">"%Y/%m/%d"</span>))</span>
 <span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"svars"</span>)</span>
 <span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>VAR        <span class="ot">&lt;-</span> vars<span class="sc">::</span><span class="fu">VAR</span>(DATA[,<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>)],<span class="at">p =</span><span class="dv">2</span>,<span class="at">type =</span> <span class="st">"const"</span>)</span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>VAR<span class="sc">$</span>varresult<span class="sc">$</span>c<span class="sc">$</span>coefficients</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>VAR<span class="sc">$</span>varresult<span class="sc">$</span>c<span class="sc">$</span>coefficients</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>       c.l1        y.l1        x.l1        c.l2        y.l2        x.l2 
@@ -272,8 +267,8 @@ C_{3,1}(L) &amp; C_{3,2}(L) &amp; C_{3,3}(L)
 -9.91395632 </code></pre>
 </div>
 <details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>VAR<span class="sc">$</span>varresult<span class="sc">$</span>y<span class="sc">$</span>coefficients</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>VAR<span class="sc">$</span>varresult<span class="sc">$</span>y<span class="sc">$</span>coefficients</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>       c.l1        y.l1        x.l1        c.l2        y.l2        x.l2 
@@ -282,8 +277,8 @@ C_{3,1}(L) &amp; C_{3,2}(L) &amp; C_{3,3}(L)
 -5.84527946 </code></pre>
 </div>
 <details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>VAR<span class="sc">$</span>varresult<span class="sc">$</span>x<span class="sc">$</span>coefficients</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>VAR<span class="sc">$</span>varresult<span class="sc">$</span>x<span class="sc">$</span>coefficients</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>       c.l1        y.l1        x.l1        c.l2        y.l2        x.l2 
@@ -292,9 +287,9 @@ C_{3,1}(L) &amp; C_{3,2}(L) &amp; C_{3,3}(L)
  6.70493277 </code></pre>
 </div>
 <details>
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>SIGMA<span class="ot">&lt;-</span><span class="fu">summary</span>(VAR)</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>SIGMA<span class="sc">$</span>covres</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>SIGMA<span class="sc">$</span>covres</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>          c         y         x
@@ -306,9 +301,9 @@ x 0.1369263  0.567906 1.6557099</code></pre>
 <p>Habiendo estimado el VAR a continuación encontramos las restricciones de corto o contemporáneas y largo plazo:</p>
 <div class="cell">
 <details>
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>BQMODEL<span class="ot">&lt;-</span> <span class="fu">BQ</span>(VAR)</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(BQMODEL)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(BQMODEL)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>
@@ -344,7 +339,7 @@ x  13.69   56.79 165.57</code></pre>
 <p>En seguida, calculamos la función impulso respuesta para cada variable, teniendo en cuenta que el PIB y la proporción de activos del sistema bancario invertidos en títulos y valores del gobierno no sufren en el largo plazo ningún efecto de los tres shocks estructurales.</p>
 <div class="cell">
 <details>
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>FIR_BQ <span class="ot">&lt;-</span> <span class="fu">irf</span>(BQMODEL,<span class="at">n.ahead =</span> <span class="dv">32</span>, <span class="at">impulse =</span> <span class="fu">c</span>( <span class="st">"c"</span>, <span class="st">"y"</span>, <span class="st">"x"</span>), <span class="at">boot =</span><span class="cn">FALSE</span>)</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>tecno  <span class="ot">&lt;-</span> <span class="fu">cbind</span>(<span class="fu">cumsum</span>(FIR_BQ<span class="sc">$</span>irf<span class="sc">$</span>c[, <span class="dv">1</span>]), FIR_BQ<span class="sc">$</span>irf<span class="sc">$</span>c[, <span class="dv">2</span>],  FIR_BQ<span class="sc">$</span>irf<span class="sc">$</span>c[, <span class="dv">3</span>])</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>RESULTADO1<span class="ot">&lt;-</span><span class="fu">as.data.frame</span>(tecno)</span>
@@ -424,7 +419,7 @@ x  13.69   56.79 165.57</code></pre>
 <span id="cb12-77"><a href="#cb12-77" aria-hidden="true" tabindex="-1"></a>           )</span>
 <span id="cb12-78"><a href="#cb12-78" aria-hidden="true" tabindex="-1"></a>)<span class="sc">+</span><span class="fu">guides</span>(<span class="at">color =</span> <span class="fu">guide_legend</span>(<span class="at">nrow =</span> <span class="dv">1</span>))<span class="sc">+</span></span>
 <span id="cb12-79"><a href="#cb12-79" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks=</span><span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">32</span>,<span class="dv">4</span>))</span>
-<span id="cb12-80"><a href="#cb12-80" aria-hidden="true" tabindex="-1"></a>Z</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb12-80"><a href="#cb12-80" aria-hidden="true" tabindex="-1"></a>Z</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <p><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
@@ -433,7 +428,7 @@ x  13.69   56.79 165.57</code></pre>
 <p>Inplicaciones</p>
 <div class="cell">
 <details>
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Descomposición de la varianza HISTÓRICA</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="do">##FUNCIONES</span></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>VARhd <span class="ot">&lt;-</span> <span class="cf">function</span>(Estimation){</span>
@@ -535,12 +530,12 @@ x  13.69   56.79 165.57</code></pre>
 <span id="cb13-99"><a href="#cb13-99" aria-hidden="true" tabindex="-1"></a>    }</span>
 <span id="cb13-100"><a href="#cb13-100" aria-hidden="true" tabindex="-1"></a>  }</span>
 <span id="cb13-101"><a href="#cb13-101" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(companion)</span>
-<span id="cb13-102"><a href="#cb13-102" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-102"><a href="#cb13-102" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="cell">
 <details>
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>SERIE <span class="ot">&lt;-</span><span class="fu">fitted</span>(VAR)</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>BQh<span class="ot">&lt;-</span><span class="fu">VARhd</span>(VAR)</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>dates1<span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="fu">as.Date</span>(<span class="st">"2016-03-01"</span>), <span class="at">length=</span><span class="fu">length</span>(SERIE[,<span class="dv">1</span>])<span class="sc">+</span><span class="dv">2</span>,<span class="at">by=</span><span class="st">"quarters"</span>)</span>
@@ -549,7 +544,7 @@ x  13.69   56.79 165.57</code></pre>
 <span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>BQc_D<span class="ot">&lt;-</span>BQh[,<span class="dv">1</span>,<span class="dv">2</span>] <span class="co">#SHOCK DEMANDA SOBRE c</span></span>
 <span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>BQc_D<span class="ot">&lt;-</span><span class="fu">xts</span>(BQc_D, <span class="at">order.by=</span>dates1)</span>
 <span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>BQc_F<span class="ot">&lt;-</span>BQh[,<span class="dv">1</span>,<span class="dv">3</span>] <span class="co">#SHOCK DEMANDA2 SOBRE c</span></span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>BQc_F<span class="ot">&lt;-</span><span class="fu">xts</span>(BQc_F, <span class="at">order.by=</span>dates1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>BQc_F<span class="ot">&lt;-</span><span class="fu">xts</span>(BQc_F, <span class="at">order.by=</span>dates1)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 
@@ -633,12 +628,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
+    button.setAttribute("title", "Copiado");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
+      button.setAttribute("data-bs-title", "Copiado");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",

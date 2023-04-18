@@ -1,8 +1,10 @@
 project:
   type: website
-
+  output-dir: docs
 website:
-  title: "EXAMPLE"
+  title: "LUIS ORTIZ CEVALLOS"
+  sidebar: 
+    logo: Luis.png
   navbar:
     right:
       - about.qmd
@@ -12,8 +14,10 @@ website:
         href: https://twitter.com
 format:
   html:
-    theme: minty
+    theme: zephyr
     css: styles.css
+    code-fold: true
+    include-after-body: graph_fold.html
 
 editor: visual
 

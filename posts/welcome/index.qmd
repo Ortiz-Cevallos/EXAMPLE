@@ -11,6 +11,6 @@ date: "2023-04-11"
 
 ## El Salvador
 ![](CC_CF_SV.jpg)
-
+![](IED_ANUAL_SV.jpg)
 ## Nicaragua
 ![](CC_CF_NI.jpg)

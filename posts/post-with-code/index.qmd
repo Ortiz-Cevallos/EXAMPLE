@@ -11,6 +11,57 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 library(reticulate)
 ```
 
+# Identificación de corto plazo
+
+$$
+B_{0}y_t = B_{1}y_{t-1}+\cdots+B_{p}y_{t-p}+\epsilon_{t}
+$$ {#eq-1}
+
+Donde $\epsilon_{t}$ es el término del error estructural con las siguientes características:
+
+1.  Media cero
+
+2.  No correlación serial
+
+3.  Homocedástica incondicional
+
+$B_{0}$ es una matriz nosingular que denota las interacciones contemporáneas entre las variables incluidas en el vector $y_{t}$
+
+La ecuación @eq-1 puede escribirse como:
+
+```{=tex}
+\begin{equation}
+B(L)y_t = \epsilon_{t}
+\label{e2}
+\end{equation}
+```
+Donde $B(L)=B_{0}-B_{1}L-B_{2}L^2-\cdots-B_{p}L^p$
+
+# Principios
+
+La fórmula de descomposición de Beveridge-Nelson se puede expresar de la siguiente manera en LaTeX:
+
+```{=tex}
+\begin{equation*}
+y_t = \tau_t + \phi_t
+\end{equation*}
+```
+donde $y_t$ es la serie temporal original, $\tau_t$ es el componente tendencial y $\phi_t$ es el componente cíclico.
+
+Además, el componente tendencial $\tau_t$ se puede expresar como:
+
+```{=tex}
+\begin{equation*}
+\tau_t = \sum_{j=-\infty}^{+\infty} h_j y_{t-j}
+\end{equation*}
+```
+donde $h_j$ es la función de filtro de Hodrick-Prescott, y el componente cíclico $\phi_t$ se puede expresar como:
+
+```{=tex}
+\begin{equation*}
+\phi_t = y_t - \tau_t
+\end{equation*}
+```
 # Aplicación para Guatemala
 
 ## Blanchard-Quah ortogonalización (restricciones) sobre C(1)

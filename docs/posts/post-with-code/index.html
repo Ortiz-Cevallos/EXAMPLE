@@ -169,6 +169,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
+<section id="identificación-de-corto-plazo" class="level1">
+<h1>Identificación de corto plazo</h1>
+<p><span id="eq-1"><span class="math display">\[
+B_{0}y_t = B_{1}y_{t-1}+\cdots+B_{p}y_{t-p}+\epsilon_{t}
+\tag{1}\]</span></span></p>
+<p>Donde <span class="math inline">\(\epsilon_{t}\)</span> es el término del error estructural con las siguientes características:</p>
+<ol type="1">
+<li><p>Media cero</p></li>
+<li><p>No correlación serial</p></li>
+<li><p>Homocedástica incondicional</p></li>
+</ol>
+<p><span class="math inline">\(B_{0}\)</span> es una matriz nosingular que denota las interacciones contemporáneas entre las variables incluidas en el vector <span class="math inline">\(y_{t}\)</span></p>
+<p>La ecuación <a href="#eq-1">Ecuación&nbsp;1</a> puede escribirse como:</p>
+<span class="math display">\[\begin{equation}
+B(L)y_t = \epsilon_{t}
+\label{e2}
+\end{equation}\]</span>
+<p>Donde <span class="math inline">\(B(L)=B_{0}-B_{1}L-B_{2}L^2-\cdots-B_{p}L^p\)</span></p>
+</section>
+<section id="principios" class="level1">
+<h1>Principios</h1>
+<p>La fórmula de descomposición de Beveridge-Nelson se puede expresar de la siguiente manera en LaTeX:</p>
+<span class="math display">\[\begin{equation*}
+y_t = \tau_t + \phi_t
+\end{equation*}\]</span>
+<p>donde <span class="math inline">\(y_t\)</span> es la serie temporal original, <span class="math inline">\(\tau_t\)</span> es el componente tendencial y <span class="math inline">\(\phi_t\)</span> es el componente cíclico.</p>
+<p>Además, el componente tendencial <span class="math inline">\(\tau_t\)</span> se puede expresar como:</p>
+<span class="math display">\[\begin{equation*}
+\tau_t = \sum_{j=-\infty}^{+\infty} h_j y_{t-j}
+\end{equation*}\]</span>
+<p>donde <span class="math inline">\(h_j\)</span> es la función de filtro de Hodrick-Prescott, y el componente cíclico <span class="math inline">\(\phi_t\)</span> se puede expresar como:</p>
+<span class="math display">\[\begin{equation*}
+\phi_t = y_t - \tau_t
+\end{equation*}\]</span>
+</section>
 <section id="aplicación-para-guatemala" class="level1">
 <h1>Aplicación para Guatemala</h1>
 <section id="blanchard-quah-ortogonalización-restricciones-sobre-c1" class="level2">

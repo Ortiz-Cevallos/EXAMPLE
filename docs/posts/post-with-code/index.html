@@ -224,9 +224,14 @@ y_t = A_{1}y_{t-1}+\cdots+A_{p}y_{t-p}+u_{t}
 <li><p>Si la condición de orden es satisfecha existe una solución única en el sentido estadístico pero no en el sentido económico ello debido a que existen supuestos alternativos para la normalización siendo éstos:</p></li>
 </ol>
 <ol type="i">
-<li>Estándar con base en: <span class="math inline">\(\Sigma_{w}=I_{w}\)</span></li>
+<li>Estándar con base en: <span class="math inline">\(\Sigma_{w}=I_{k}\)</span></li>
 <li>Dejar libres los valores de la diagonal de la matriz <span class="math inline">\(\Sigma_{w}\)</span> pero restringir los valores de la diagonal de la matriz <span class="math inline">\(B_{0}\)</span> a la unidad, de manera que <span class="math inline">\(w_{t}=B_{0}u_{t}\)</span>. Esto significa que se tendría en la estimación de <span class="math inline">\(B_{0}\)</span> <span class="math inline">\((k(k-1))/2\)</span> restricciones.</li>
 <li>Por convención la selección de alternativa lo dicta la naturaleza económica de los supuestos de identificación. Con base a ello uno escoge restringir <span class="math inline">\(B_{0}^{-1}\)</span> (primera alternativa) o restringir <span class="math inline">\(B_{0}\)</span> (segunda alternativa).</li>
+<li>Las alternativas anteriores pueden resumirse con base en <span class="math inline">\(B_{0}u_{t}=Cw_{t}\)</span>, donde <span class="math inline">\(\Sigma_{w}=I_{k}\)</span> lo que implica que: <span class="math inline">\(\Sigma_{u}=B_{0}^{-1}CC^{´}B_{0}^{-1´}\)</span> de manera que si:</li>
+</ol>
+<ol type="A">
+<li><span class="math inline">\(C=I_{k}\)</span> tenemos el caso estándar</li>
+<li>Pero también se puede poner restricciones tanto en <span class="math inline">\(B_{0}\)</span> como en <span class="math inline">\(C\)</span>. Sí las restricciones son sobre los elementos de la diagonal de la matriz <span class="math inline">\(B_{0}\)</span> los cuales se restringe a la unidad y <span class="math inline">\(\Sigma_{w}=I_{k}\)</span> se tendría <span class="math inline">\(k^{2}+(k(k-1))/2\)</span> restricciones sobre <span class="math inline">\(B_{0}\)</span> y <span class="math inline">\(C\)</span>. Asimismo, si los elementos diagonales de tanto <span class="math inline">\(B_{0}\)</span> y <span class="math inline">\(C\)</span> están restringidos a la unidad y los elementos diagonales de <span class="math inline">\(\Sigma_{w}\)</span> se dejan sin restricciones, la condición de orden exige restricciones <span class="math inline">\(k^{2}+(k(k+1))/2\)</span>, incluyendo las restricciones de normalización en las diagonales.</li>
 </ol>
 </section>
 <section id="principios" class="level1">

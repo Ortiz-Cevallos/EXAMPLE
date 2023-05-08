@@ -84,9 +84,15 @@ $$\Sigma_{u}=\mathbb{E}(u_{t}u_{t}^{´})= B_{0}^{-1}\mathbb{E}(w_{t}w_{t}^{´})B
 5. Noten que $(k(k+1))/2$ es el máximo número de elementos en la matriz $B_{0}^{-1}$ que son libres (condición de orden) siendo ésta la tarea de identificación. 
 
 6. Si la condición de orden es satisfecha existe una solución única en el sentido estadístico pero no en el sentido económico ello debido a que existen supuestos alternativos para la normalización siendo éstos:
-  i) Estándar con base en: $\Sigma_{w}=I_{w}$ 
+  i) Estándar con base en: $\Sigma_{w}=I_{k}$ 
   ii) Dejar libres los valores de la diagonal de la matriz $\Sigma_{w}$ pero restringir los valores de la diagonal de la matriz  $B_{0}$ a la unidad, de manera que $w_{t}=B_{0}u_{t}$. Esto significa que se tendría en la estimación de  $B_{0}$  $(k(k-1))/2$ restricciones. 
   iii) Por convención la selección de alternativa lo dicta la naturaleza económica de los supuestos de identificación. Con base a ello uno escoge restringir $B_{0}^{-1}$ (primera alternativa) o restringir $B_{0}$ (segunda alternativa).
+  iv) Las alternativas anteriores pueden resumirse con base en $B_{0}u_{t}=Cw_{t}$,
+  donde $\Sigma_{w}=I_{k}$ lo que implica que: $\Sigma_{u}=B_{0}^{-1}CC^{´}B_{0}^{-1´}$
+  de manera que si:
+   A.   $C=I_{k}$ tenemos el caso estándar
+   B.   Pero también se puede poner restricciones tanto en $B_{0}$ como en $C$. Sí las restricciones son sobre los elementos de la diagonal de la matriz $B_{0}$ los cuales se restringe a la unidad y $\Sigma_{w}=I_{k}$ se tendría $k^{2}+(k(k-1))/2$ restricciones sobre  $B_{0}$ y $C$. Asimismo, si los elementos diagonales de
+tanto $B_{0}$ y $C$ están restringidos a la unidad y los elementos diagonales de $\Sigma_{w}$ se dejan sin restricciones, la condición de orden exige restricciones $k^{2}+(k(k+1))/2$, incluyendo las restricciones de normalización en las diagonales.
   
   
   
